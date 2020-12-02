@@ -5,7 +5,6 @@ MESSAGES = YAML.load_file('calculator_messages.yml')
 #MESSAGES = YAML.load(ERB.new("calculator_messages.yml.erb").result)
 
 
-
 def prompt(message)
   Kernel.puts("=> #{message}")
 end
