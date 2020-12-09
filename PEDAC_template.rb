@@ -1,21 +1,18 @@
 =begin
+*Problem
+Input:
+  -
+Output:
+  -
+rules:
 
-Problem
--input:
--output:
--rules:
+*Examples / Test Cases
 
-Examples / Test Cases
+*Data Structures
+Input:
+Rules:
 
-Data Structures
--input
--rules
+*Algorithm
 
-Algorithm
-
-
-Code
-
-
-
+*Code
 =end
