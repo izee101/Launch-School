@@ -1,4 +1,4 @@
-# Repeat_Yourself
+# Repeat_Yourself.rb
 
 =begin
 *Problem
