@@ -9,8 +9,8 @@ rules:
 *Examples / Test Cases
 
 *Data Structures
-Input:
-Rules:
+choices:
+use:
 
 *Algorithm
 

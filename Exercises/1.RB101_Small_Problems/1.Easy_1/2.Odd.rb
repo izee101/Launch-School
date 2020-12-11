@@ -1,5 +1,23 @@
 # Odd.rb
 
+def is_odd?(number)
+  number = number.abs
+  if number % 2 != 0
+    true
+  else
+    false
+  end
+end
+
+# Examples/Tests
+puts is_odd?(2)    # => false
+puts is_odd?(5)    # => true
+puts is_odd?(-17)  # => true
+puts is_odd?(-8)   # => false
+puts is_odd?(0)    # => false
+puts is_odd?(7)    # => true
+
+
 =begin
 *Problem
 Input:
@@ -30,20 +48,3 @@ Rules:
   -if odd, return true
 *Code
 =end
-
-def is_odd?(number)
-  number = number.abs
-  if number % 2 != 0
-    true
-  else
-    false
-  end
-end
-
-# Examples/Tests
-puts is_odd?(2)    # => false
-puts is_odd?(5)    # => true
-puts is_odd?(-17)  # => true
-puts is_odd?(-8)   # => false
-puts is_odd?(0)    # => false
-puts is_odd?(7)    # => true

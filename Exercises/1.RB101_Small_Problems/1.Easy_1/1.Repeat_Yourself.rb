@@ -1,5 +1,14 @@
 # Repeat_Yourself.rb
 
+def repeat(string, number)
+  number.times do
+    puts string
+  end
+end
+
+repeat('This method works!', 3)
+
+
 =begin
 *Problem
 Input:
@@ -28,11 +37,3 @@ Hello
 
 *Code
 =end
-
-def repeat(string, number)
-  number.times do
-    puts string
-  end
-end
-
-repeat('This method works!', 3)
