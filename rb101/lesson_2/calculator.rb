@@ -94,9 +94,9 @@ loop do # main loop
 
   prompt("The result is #{result}")
 
-  prompt("Do you want to perform another calculation? (Y to calculate again)")
+  prompt("Do you want to perform another calculation? (press 'y' to calculate again)")
   answer = Kernel.gets().chomp()
   break unless answer.downcase().start_with?('y')
 end
 
-prompt("Thank you for using calculator. Good bye!")
+prompt("Thank you for using this calculator #{name}. Good bye!")
