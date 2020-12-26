@@ -6,9 +6,8 @@ Input:
 Output:
   -
 rules:
-  -
-clarification:
-  -
+--implicit requirements:
+--explicit requirements:
 
 *Examples / Test Cases
 
