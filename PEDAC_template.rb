@@ -1,19 +1,22 @@
 =begin
 *Problem:
-
+--explicit requirements
 Input:
   -
 Output:
   -
 rules:
+
 --implicit requirements:
---explicit requirements:
+
+  -Questions:
 
 *Examples / Test Cases
 
 *Data Structures
-choices:
-use:
+Notes:
+
+Use:
 
 *Algorithm
 
