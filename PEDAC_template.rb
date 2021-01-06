@@ -23,7 +23,7 @@
 
 #Data Structures
   Notes:
-    -
+    - possible methods
 
   Use:
     -
