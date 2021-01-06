@@ -1,24 +1,38 @@
 =begin
-*Problem:
---explicit requirements
-Input:
+
+#Problem:
+
+
+  Explicit requirements
+    Input:
+      -
+    Output:
+      -
+    Rules:
+      -
+
+  Implicit requirements:
+    -
+
+  Questions:
+    -
+
+#Examples / Test Cases:
+
+
+
+#Data Structures
+  Notes:
+    -
+
+  Use:
+    -
+
+#Algorithm
   -
-Output:
   -
-rules:
+  -
 
---implicit requirements:
-
-  -Questions:
-
-*Examples / Test Cases
-
-*Data Structures
-Notes:
-
-Use:
-
-*Algorithm
-
-*Code
 =end
+
+#Code Implementation
