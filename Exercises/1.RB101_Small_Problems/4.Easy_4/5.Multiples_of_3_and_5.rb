@@ -34,17 +34,62 @@
 #Data Structures
   Possible methods:
     -reduce
-    -map
+    -select
   Possible structures:
     -array
 
 #Algorithm
+  - define multisum method with parameter limit
+  - init local var range, assigned to (0..limit)
+  - init local var multiple, assigned to array of multiples
+    -select multiples based on if num % 3 == 0 or num % 5 == 0
+  -call sum or reduce on local var multiple
 
-
-
-   => expected return:
-   => expected output:
+   => expected return: integer representing the sum of all multiples of 3 && 5 between 1 and given limit
+   => expected output: none
 
 =end
 
 #Code Implementation
+
+
+def multisum(limit)
+  range = (0..limit)
+
+  multiple = range.select { |num| num % 3 == 0 || num % 5 == 0 }
+
+  multiple.sum
+end
+
+### LS Solution ###
+=begin
+
+def multiple?(number, divisor)
+  number % divisor == 0
+end
+
+def multisum(max_value)
+  sum = 0
+  1.upto(max_value) do |number|
+    if multiple?(number, 3) || multiple?(number, 5)
+      sum += number
+    end
+  end
+  sum
+end
+
+
+Discussion
+
+Our solution begins with a multiple? method that returns true if the given number is an exact multiple of divisor, false if it's not.
+This method isn't necessary, but it makes the multisum a bit more readable.
+
+multisum does nothing fancy; it rushes headlong into the problem, and comes out the other end with the correct result.
+It adds each value that is a multiple of 3 or 5 in the range to the sum variable.
+
+Further Exploration
+
+Investigate Enumerable.inject (also known as Enumerable.reduce), How might this method be useful in solving this problem?
+(Note that Enumerable methods are available when working with Arrays.) Try writing such a solution. Which is clearer?
+Which is more succinct?
+=end
