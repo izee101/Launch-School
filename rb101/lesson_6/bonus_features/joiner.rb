@@ -17,7 +17,7 @@ p joinor([1, 2, 3]) == "1, 2, or 3"
 p joinor([1, 2, 3], '; ') == "1; 2; or 3"
 p joinor([1, 2, 3], ', ', 'and') == "1, 2, and 3"
 
-=begin ##### MY SOLUTION #####
+=begin ##### MY SOLUTION, too bulky #####
 
 ###################### HELPER METHODS ########################
 def arr_length1(arr, _, _)
