@@ -37,16 +37,48 @@ old-fashioned way and calculate the result by analyzing the characters in the st
 
 #Data Structures
   Possible methods:
-    -
+    -map
+    -each
+    -select
   Possible structures:
-    -
+    -hash
 
 #Algorithm
-  -
+  -init constant DIGITS assigned to a hash
+  -populate hash keys as string numbers, assigned to their corresponding integer
+  number as values
+  -define string_to_integer method with parameter (string)
+  -split string into an array of characters
+  -map each string character to corresponding integer using DIGITS hash
+  -rejoin integer values to produce final number (no join method for integers, use math)
+    -init local variable value, assigned to zero
+    -iterate over each mapped digit with block invocation
+      -block invocation should take each digit and multiply by 10
+      -then multiply new value by 10
+      -then add next digit to value
+  -return final integer
 
-   => expected return:
-   => expected output:
+   => expected return: integer converted from string form
+   => expected output: none
 
 =end
 
 #Code Implementation
+
+DIGITS = {
+  '0' => 0, '1' => 1, '2' => 2, '3' => 3, '4' => 4,
+  '5' => 5, '6' => 6, '7' => 7, '8' => 8, '9' => 9,
+}
+
+def string_to_integer(string)
+  digits = string.chars.map { |char| DIGITS[char] } # returns array of integers
+
+  # value = 0
+  # digits.each { |digit| value = 10 * value + digit }
+  # value
+  digits.reduce { |value, digit| (value * 10) + digit } # mechanically 'joins' integers
+
+end
+
+p string_to_integer('4321') == 4321
+p string_to_integer('570') == 570
