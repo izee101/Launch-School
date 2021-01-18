@@ -34,19 +34,27 @@
     -array
 
 #Algorithm
-  -
+  -def method running_total with parameter array
+  -init local variable 'sum', assigned an initial value of 0
+  -call map method on array, and invoke block with parameter 'value'
+    -block invocation will increment the sum by value on each iteration
 
-   => expected return:
-   => expected output:
+   => expected return: a transformed array in which each element is a running total
+   => expected output: none
 
 =end
 
 #Code Implementation
 
-def running_total(array)
-  sum = 0
-  array.map { |value| sum += value }
-end
+# def running_total(array)
+#   sum = 0
+#   array.map { |value| sum += value }
+# end
+
+# p running_total([2, 5, 13]) == [2, 7, 20]
+# p running_total([14, 11, 7, 15, 20]) == [14, 25, 32, 47, 67]
+# p running_total([3]) == [3]
+# p running_total([]) == []
 
 =begin
 
@@ -58,4 +66,27 @@ Further Exploration
 
 Try solving this problem using Enumerable#each_with_object or Enumerable#inject (note that Enumerable methods can be applied to Arrays).
 
+#Algorithm
+  -def method running_total with parameter array
+  -init local variable sum, assigned to integer 0
+  -call each_with_object method on array, passing in an array literal as argument
+  -block invocation with parameters |value, arr|
+    -increment sum by the value
+      - {|value, arr| sum += value}
+  -return new array
+
+   => expected return: a transformed array in which each element is a running total
+   => expected output: none
 =end
+
+def running_total(array)
+  sum = 0
+  array.each_with_object([]) do |value, arr|
+    arr << sum += value
+  end
+end
+
+p running_total([2, 5, 13]) == [2, 7, 20]
+p running_total([14, 11, 7, 15, 20]) == [14, 25, 32, 47, 67]
+p running_total([3]) == [3]
+p running_total([]) == []
