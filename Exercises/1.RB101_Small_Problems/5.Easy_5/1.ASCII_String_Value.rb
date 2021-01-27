@@ -1,9 +1,10 @@
 =begin
 
 #Problem: ASCII String Value
-  Write a method that determines and returns the ASCII string value of a string that is passed in as an argument.
-  The ASCII string value is the sum of the ASCII values of every character in the string. (You may use String#ord
-  to determine the ASCII value of a character.)
+  Write a method that determines and returns the ASCII string value of a string that is
+  passed in as an argument.
+  The ASCII string value is the sum of the ASCII values of every character in the string.
+  (You may use String#ord to determine the ASCII value of a character.)
 
   Explicit requirements
     Input:
@@ -38,8 +39,10 @@
 
 #Algorithm
   -define method ascii_value with parameter (string)
+  -init var 'sum' assigned a a value of 0
   -iterate through string, calling String#ord on each character to get ascii value
-  -reduce values into a sum
+  -increment var 'sum' by the value of each character
+  -return var 'sum'
 
    => expected return: an integer representing the sum of all ascii values in a given string
    => expected output: none
