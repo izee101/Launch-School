@@ -31,13 +31,18 @@ remove_vowels(%w(ABC AEIOU XYZ)) == ['BC', '', 'XYZ']
     -gsub
     -select
     -chars
+    -map
   Possible structures:
     -array
 
 #Algorithm
+  -init constant for char removal
+  -define method
+  -iterate through array, mapping chars not included in constant
+  -return new array
 
 
-   => expected return:
+   => expected return: transformed array
    => expected output:
 
 =end
@@ -47,3 +52,7 @@ remove_vowels(%w(ABC AEIOU XYZ)) == ['BC', '', 'XYZ']
 def remove_vowels(strings)
   strings.map { |string| string.delete('aeiouAEIOU') }
 end
+
+p remove_vowels(%w(abcdefghijklmnopqrstuvwxyz)) == %w(bcdfghjklmnpqrstvwxyz)
+p remove_vowels(%w(green YELLOW black white)) == %w(grn YLLW blck wht)
+p remove_vowels(%w(ABC AEIOU XYZ)) == ['BC', '', 'XYZ']
