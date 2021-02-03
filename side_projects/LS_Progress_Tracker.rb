@@ -86,4 +86,4 @@ puts "\n\n"
 
 ed_low = end_date_low(wr_low)
 ed_high = end_date_high(wr_high)
-prompt("I estimate that you finish between #{ed_low} and #{ed_high} if you keep up this pace.")
+prompt("I estimate that you will complete Launch School between #{ed_low} and #{ed_high} if you keep up this pace.")
