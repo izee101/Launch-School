@@ -48,3 +48,12 @@ Rules:
   -if odd, return true
 *Code
 =end
+
+=begin Attempt #2
+def is_odd?(num)
+  if num == 0
+    false
+  end
+  num % 2 != 0
+end
+=end
